@@ -1,0 +1,34 @@
+fieldset {
+    margin: 1em auto;
+    border-color: #aad2ff;;
+  }
+  
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+label {
+    font-weight: bold;
+    display: block;
+}
+  
+button {
+    background-color: #aad2ff; 
+    border: none;
+    color: #000001;;
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+h1{
+    color:rgb(0, 0, 0);
+}
+  
+h2{
+    color:rgb(10, 83, 156);
+}

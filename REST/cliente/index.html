@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Gestión de medicación</title>
+    
+    <!--
+        
+    <style>
+        .seccion{display: none;}
+        .activa{display: block;}
+    </style>
+-->
+</head>
+
+
+<body>
+
+    <h1>Gestión de la Medicación</h1>
+
+    <!-- Página de login -->
+    <div id="login" class="seccion activa">
+        <h2>Login</h2>
+       <p>Usuario: <input id="usuario" type="text"/></p> 
+       <p>Contraseña: <input id="password" type="text"/></p>
+       <button onclick="login()">Entrar</button> 
+    </div>
+
+    <p>------------------------------------------------------------------------------------</p>
+
+
+
+
+
+
+
+    <!-- Página principal del médico en la que tiene una lista de pacientes
+         y puede añadir un paciente nuevo  -->
+
+    <div id="paginaPrincipalMedico" class="seccion">
+        <h2>Menu principal del médico</h2>
+        <p>Bienvenido al sistema de gestión de medicación D/Dª <span id="nombreMedico"></span></p>
+        <h3>Lista de pacientes</h3>
+        <ul id="listaPacientes">
+        
+        </ul>
+
+        <p>---------------------------------------</p>
+        <button onclick="cargarListaPacientes()">Actualizar Lista Pacientes</button>   
+        
+        <div >
+
+            <fieldset id="nuevoPaciente">
+                <legend>Nuevo Paciente</legend>
+                <p>Introduzca los datos del nuevo paciente</p>
+                <p><label>Nombre: <input id="nombrePaciente" type="text"/></label></p>
+                <p><label>Apellidos: <input id="apellidosPaciente" type="text"/></label></p>
+                <p><label>Fecha de nacimiento: <input type="date" id="fechaNacimientoPaciente"/></label></p> 
+                <p><label>Género: <select id="generoPaciente">
+                    <option value="H">H</option>
+                    <option value="M">M</option>
+                </select></label></p>
+                <p><label>Código de acceso: <input type="text"  id="codigoPaciente"/></label></p>
+                <p><label>Observaciones: <input type="text" id="observacionesPaciente"/></label></p>
+            <button onclick="anyadirPaciente()">Añadir nuevo paciente</button>
+            </fieldset>
+        </div>
+        
+        
+        <button onclick="salir()"> Salir </button>
+    </div>
+    <p>------------------------------------------------------------------------------------</p>
+
+
+
+
+
+
+
+
+
+    <!-- EXPEDIENTE DEL PACIENTE-->
+    <div id="expedientePaciente" class="seccion">
+        <div>
+            <h2>Menu principal del médico</h2>
+            <p>D/Dª <span class="nombreMedico"></span></p>
+            <h3>Paciente: <span id="nomPac"></span></h3>
+            <h3>Expediente: </h3>
+            <ul id="expedientePac">
+
+            </ul>
+        </div>
+        
+        <div>
+            <h3>Medicación:</h3>
+            <ul id="medicacionPac">
+
+            </ul>
+
+        </div>
+
+        <div>
+            <fieldset id="nuevaMedicación">
+                <legend>Nueva Medicación</legend>
+                <p>Introduzca los datos para la nueva medicación</p>
+                <p><label>Medicamento: <select id="nombreMed"></select></label></p>
+                <p><label>Fecha de asignación: <input type="date" id="fechaAsigMed" /></label></p> 
+                
+                <p><label>Dosis <input type="number"  id="dosisMed"/></label></p>
+               <!-- <p><label>Médico: <input type="number" id="medicoPaciente "/></label></p>  CREO QUE NO HACE FALTA PONERLO -->
+                <p><label>Tomas: <input type="number"  id="tomasMed" /></label></p>
+                <p><label>Frecuencia: <input type="number"  id="frecuenciaMed" /></label></p>
+                <p><label>Observaciones: <input type="text" id="observacionesMed"/></label></p>
+            <button onclick="anyadirMedicacion()">Añadir nueva medicación al paciente</button>
+            </fieldset>
+
+        </div>
+        <button onclick="salir()"> Salir </button>
+
+    </div>
+
+
+
+
+    <p>------------------------------------------------------------------------------------</p>
+    <div id="tomasPaciente" class="seccion">
+        <div>
+            <h2>Menu principal del médico</h2>
+            <p>D/Dª <span id=""></span></p>
+            <h3>Tomas del Paciente: <span id="nombrePaciente"></span></h3>
+            <ul id="tomasPac">
+                
+               
+            </ul>
+            <button onclick="salir()"> Salir </button>
+            
+        </div>
+
+    </div>
+
+
+
+
+<script src="rest.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>

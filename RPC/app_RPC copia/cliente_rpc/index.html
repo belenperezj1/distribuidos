@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf8">
+	<title>Gestión de Medicación Para Paciente</title>
+	<style>
+		body,
+		input,
+		button {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 12px;
+		}
+	</style>
+	<!--
+		.seccion{display: none;}
+		.activa{display: block;}
+		-->	
+	<script src="rest.js"></script> 
+	<script src="rpc.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body >
+	<div id="login" class="seccion activa">
+		<label>Código de acceso: <input id="codigoAcceso"></label>
+		<button onclick="loginCliente()">Login</button>
+	</div>
+
+
+	<p>---------------------------------------------------------------------------</p>
+
+
+	<div id="PaginaPrincipal" class="seccion">
+		<h1>Gestión de la Medicación</h1>
+		<p>Bienvenido <span id="nombrePaciente"></span>NOMBRE Y APELLIDOS</p>
+		<p>Su médico <span id="nombreMedico"></span>NOMBRE_MÉDICO</p>
+		<p>Observaciones : OBSERVACIONES</p>
+
+		<h2>Lista de su medicación :</h2>
+		<div id="listaMedicacion">
+
+		</div>
+		<h2>Lista de tomas: </h2>
+		<ul id="listaTomas">
+
+		</ul>
+		<button onclick="salir()">Salir</button>
+	</div>
+</body>
+
+</html>
